@@ -1,0 +1,13 @@
+li a i {
+  font-size: 25px;
+  color: black;
+}
+@media screen and (min-width: 992px) {
+  li a i {
+    font-size: 35px;
+  }
+  li a i:hover {
+    color: orangered;
+    border-bottom: 3px solid black;
+  }
+}
