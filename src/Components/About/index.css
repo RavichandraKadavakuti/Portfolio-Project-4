@@ -36,7 +36,7 @@ b {
 
 .jCGVMh {
   width: 300px !important;
-  min-height: 100% !important;
+  max-height: 150px !important;
   margin-left: 20px !important;
   display: flex !important;
   flex-direction: column !important;
