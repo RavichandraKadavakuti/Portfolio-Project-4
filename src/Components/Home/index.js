@@ -11,7 +11,7 @@ const Home = () => {
         <NavHeader />
         <div
           data-aos="zoom-in-up"
-          className="d-flex flex-column bg-success-subtle p-2 rounded"
+          className="d-flex flex-column bg-success-subtle p-3 rounded"
         >
           <div>
             <HomePageContent />
