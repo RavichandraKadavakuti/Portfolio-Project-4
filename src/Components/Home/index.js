@@ -1,16 +1,24 @@
 import React from "react";
-import Navbar from "../Navbar";
-import HomePage from "../HomePage";
-import Contact from "../Contact";
+import NavHeader from "../NavHeader";
+import HomePageContent from "../HomePageContent";
+import NavFooter from "../NavFooter";
+import "./index.css";
 
 const Home = () => {
   return (
-    <div className="container">
+    <div className="container custom-scroll-container">
       <div className="row">
-        <Navbar />
-        <div className="bg-success-subtle p-2 p-lg-5 mt-lg-2 rounded">
-          <HomePage />
-          <Contact />
+        <NavHeader />
+        <div
+          data-aos="zoom-in-up"
+          className="d-flex flex-column bg-success-subtle p-2 rounded"
+        >
+          <div>
+            <HomePageContent />
+          </div>
+          <div className="my-5">
+            <NavFooter />
+          </div>
         </div>
       </div>
     </div>

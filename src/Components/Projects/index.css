@@ -1,0 +1,18 @@
+.project-img {
+  max-height: 220px;
+}
+
+.project-img:hover {
+  height: 218px;
+}
+
+.project-github {
+  color: black !important;
+  border-bottom: none !important;
+  font-size: 20px;
+}
+
+.project-github:hover {
+  color: gray !important;
+  cursor: pointer;
+}

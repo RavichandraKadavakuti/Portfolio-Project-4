@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from "../Navbar";
-import Contact from "../Contact";
 import "./index.css";
-import { useState } from "react";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import NavHeader from "../NavHeader";
+import NavFooter from "../NavFooter";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom/cjs/react-router-dom";
 
 const initialStates = {
   INITIAL: "Initia;",
@@ -56,7 +56,12 @@ const ContactForm = () => {
       setMessageError("");
     }
 
-    if (name && emailId && phone && message) {
+    if (
+      name.length > 3 &&
+      testEmail &&
+      phone.length === 10 &&
+      message.length >= 10
+    ) {
       try {
         setFetchstate(initialStates.INPROGRESS);
         const data = {
@@ -65,7 +70,6 @@ const ContactForm = () => {
           phone: phone,
           message: message,
         };
-
         const url = "https://formspree.io/f/mzblqqdy";
         const options = {
           method: "POST",
@@ -106,100 +110,110 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container custom-scroll-container">
       <div className="row">
-        <Navbar />
-        <div className="bg-success-subtle d-flex flex-column align-items-center justify-content-center contact-page p-2 p-lg-5">
-          {!successMessage && (
-            <form
-              onSubmit={submitForm}
-              className="border border-primary rounded col-12 col-md-6 p-2 p-lg-5 "
-            >
-              <h1 className="text-center mb-3 mb-lg-5">Submit Form Details</h1>
-              <div className="mb-3">
-                <label htmlFor="fullname" className="form-label">
-                  Enter Full Name
-                </label>
-                <input
-                  id="fullname"
-                  type="text"
-                  placeholder="Enter Full Name"
-                  className="form-control"
-                  value={name}
-                  onChange={onchangeName}
-                />
-                {nameError && (
-                  <small className="text-danger">{nameError}</small>
-                )}
-              </div>
-              <div className="mb-3">
-                <label htmlFor="email" className="form-label">
-                  Enter Email
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  placeholder="Enter Email"
-                  className="form-control"
-                  value={emailId}
-                  onChange={onchangeEmailId}
-                />
-                {emailError && (
-                  <small className="text-danger">{emailError}</small>
-                )}
-              </div>
-              <div className="mb-3">
-                <label htmlFor="mobileno" className="form-label">
-                  Enter Phone No
-                </label>
-                <input
-                  id="mobileno"
-                  type="text"
-                  placeholder="Enter Mobile No"
-                  className="form-control"
-                  value={phone}
-                  onChange={onchangePhone}
-                />
-                {phoneError && (
-                  <small className="text-danger">{phoneError}</small>
-                )}
-              </div>
-              <div className="form-floating mb-3">
-                <textarea
-                  className="form-control"
-                  placeholder="Leave a comment here"
-                  id="floatingTextarea"
-                  value={message}
-                  onChange={onchangeMessage}
-                ></textarea>
-                <label htmlFor="floatingTextarea">Message</label>
-                {messageError && (
-                  <small className="text-danger">{messageError}</small>
-                )}
-              </div>
-              <div className="d-grid">
-                <button type="submit" className="btn btn-lg btn-warning">
-                  {fetchState === initialStates.INPROGRESS
-                    ? "Please wait sending data"
-                    : "Send"}
-                </button>
-              </div>
-            </form>
-          )}
-          {successMessage && (
-            <div className="border border-primary rounded text-center p-5 my-auto col-12 col-md-6">
-              <i className="fa-solid fa-circle-check"></i>
-              <h1>Thank you</h1>
-              <div className="d-grid m-3">
-                <Link to="/">
-                  <button type="button" className="btn btn-lg btn-primary">
-                    Home
+        <NavHeader />
+        <div
+          data-aos="zoom-in-up"
+          className="d-flex flex-column bg-success-subtle p-3 rounded"
+        >
+          <div className="border border-dark rounded col-12 col-md-6 p-2 my-3 mx-auto ">
+            {!successMessage && (
+              <form onSubmit={submitForm} className="shadow-lg p-2 p-lg-5">
+                <h1 className="text-center mb-3 mb-lg-5">
+                  Submit Form Details
+                </h1>
+                <div className="mb-3">
+                  <label htmlFor="fullname" className="form-label">
+                    Enter Full Name
+                  </label>
+                  <input
+                    id="fullname"
+                    type="text"
+                    placeholder="Enter Full Name"
+                    className="form-control"
+                    value={name}
+                    onChange={onchangeName}
+                  />
+                  {nameError && (
+                    <small className="text-danger">{nameError}</small>
+                  )}
+                </div>
+                <div className="mb-3">
+                  <label htmlFor="email" className="form-label">
+                    Enter Email
+                  </label>
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="Enter Email"
+                    className="form-control"
+                    value={emailId}
+                    onChange={onchangeEmailId}
+                  />
+                  {emailError && (
+                    <small className="text-danger">{emailError}</small>
+                  )}
+                </div>
+                <div className="mb-3">
+                  <label htmlFor="mobileno" className="form-label">
+                    Enter Mobile No
+                  </label>
+                  <input
+                    id="mobileno"
+                    type="text"
+                    placeholder="Enter Mobile No"
+                    className="form-control"
+                    value={phone}
+                    onChange={onchangePhone}
+                  />
+                  {phoneError && (
+                    <small className="text-danger">{phoneError}</small>
+                  )}
+                </div>
+                <div className="form-floating mb-3">
+                  <textarea
+                    className="form-control"
+                    placeholder="Leave a comment here"
+                    id="floatingTextarea"
+                    value={message}
+                    onChange={onchangeMessage}
+                  ></textarea>
+                  <label htmlFor="floatingTextarea">Message</label>
+                  {messageError && (
+                    <small className="text-danger">{messageError}</small>
+                  )}
+                </div>
+                <div className="d-grid">
+                  <button type="submit" className="btn btn-lg btn-warning">
+                    {fetchState === initialStates.INPROGRESS
+                      ? "Please wait sending data"
+                      : "Send"}
                   </button>
+                </div>
+              </form>
+            )}
+            {successMessage && (
+              <div className="rounded text-center p-5 my-5 col-12 shadow-lg">
+                <i className="fa-solid fa-circle-check"></i>
+                <h3>Thank you</h3>
+
+                <Link to="/">
+                  <div className="d-grid mt-5">
+                    <button
+                      type="button"
+                      className="btn btn-lg btn-primary custom-home-btn"
+                    >
+                      Home
+                    </button>
+                  </div>
                 </Link>
               </div>
-            </div>
-          )}
-          <Contact />
+            )}
+          </div>
+          <div className="my-5">
+            <NavFooter />
+          </div>
         </div>
       </div>
     </div>

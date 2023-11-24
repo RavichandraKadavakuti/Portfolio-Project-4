@@ -1,38 +1,68 @@
-.fwujmm {
-  padding: 0% !important;
+.custom-about-page-titles {
+  font-size: 32px;
+  font-family: "Lobster Two", sans-serif;
 }
-.hIlYuq {
-  padding: 0% !important;
-}
-.jCGVMh {
-  min-height: auto !important;
-}
-.active {
-  color: black !important;
-  border-bottom: none !important;
-}
-.fa-graduation-cap {
+
+b {
   color: black;
 }
-.bOPcbp.using-icon {
-  background-color: transparent !important;
+
+.title {
+  font-size: 22px;
+  font-family: "Lobster Two", sans-serif;
 }
+
+.custom-skills-items:hover {
+  background-color: orangered;
+  font-weight: bold;
+  color: white;
+}
+
 .fa-graduation-cap {
+  color: black;
   font-size: 22px;
 }
-.hdbrBC {
-  margin-left: 15px;
-}
-.bTBQuh {
-  left: 0 !important;
-}
-@media screen and (min-width: 768px) {
-  .jCGVMh {
-    width: 450px !important;
-  }
-}
+
 @media screen and (min-width: 992px) {
   .fa-graduation-cap {
-    font-size: 35px;
+    font-size: 32px;
   }
+}
+
+.active {
+  color: black !important;
+  border: none !important;
+}
+
+.jCGVMh {
+  width: 300px !important;
+  min-height: 100% !important;
+  margin-left: 20px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.fwujmm {
+  padding: 0px !important;
+}
+
+.bTBQuh {
+  left: 0px !important;
+}
+
+.about-me {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+@media screen and (min-width: 992px) {
+  .about-me {
+    font-size: 18px;
+    font-weight: normal;
+  }
+}
+
+.ihNWGA {
+  height: auto !important;
 }
