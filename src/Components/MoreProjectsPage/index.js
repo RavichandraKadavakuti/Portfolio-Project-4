@@ -1,8 +1,7 @@
 import React from "react";
-import NavHeader from "../NavHeader";
-import NavFooter from "../NavFooter";
+import HeadPage from "../HeadPage";
+import FooterPage from "../FooterPage";
 import { v4 as uuidV4 } from "uuid";
-import "./index.css";
 
 const projectsList = [
   {
@@ -89,47 +88,53 @@ const projectsList = [
   },
 ];
 
-const MiniProjects = () => {
+const MoreProjectsPage = () => {
   return (
-    <div className="container custom-scroll-container">
+    <div className="container">
       <div className="row">
-        <NavHeader />
-        <div
-          data-aos="zoom-in-up"
-          className="d-flex flex-column bg-success-subtle p-3 rounded"
-        >
-          <ul className="d-flex flex-wrap justify-content-center">
+        <HeadPage />
+        <div className="p-lg-5">
+          <ul
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            className="d-flex flex-wrap justify-content-center"
+          >
             {projectsList.map((each) => (
               <li
+                data-aos="flip-up"
                 key={each.id}
-                className="col-11 col-sm-5 col-md-4  col-lg-5 border border-dark rounded text-center shadow  p-2 m-2 min-project-item"
+                className="col-11 col-sm-5 col-lg-4 border border-dark rounded shadow p-3 p-lg-5 m-2 m-lg-5 project-item"
               >
                 <a
                   href={each.projectLink}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img
-                    src={each.projectImg}
-                    alt={each.name}
-                    className="img-fluid rounded mini-project-img"
-                  />
-                  <h5 className="text-center text-dark mt-3">{each.name}</h5>
-                  <div className="d-flex justify-content-end">
-                    <a
-                      href={each.gitLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <i className="fa-brands fa-github project-github"></i>
-                    </a>
+                  <div className="card">
+                    <img
+                      src={each.projectImg}
+                      alt={each.projectName}
+                      className="card-img-top project-img"
+                    />
+                    <div className="card-body">
+                      <h6 className="card-text text-center">{each.name}</h6>
+                      <div>
+                        <a
+                          href={each.githubLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <i className="fa-brands fa-github project-github"></i>
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </a>
               </li>
             ))}
           </ul>
-          <div className="my-5">
-            <NavFooter />
+          <div data-aos="flip-up">
+            <FooterPage />
           </div>
         </div>
       </div>
@@ -137,4 +142,4 @@ const MiniProjects = () => {
   );
 };
 
-export default MiniProjects;
+export default MoreProjectsPage;

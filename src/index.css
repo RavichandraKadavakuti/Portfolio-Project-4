@@ -1,11 +1,18 @@
+body {
+  background-color: #d1e7dd !important;
+}
+
 * {
   padding: 0%;
   margin: 0%;
   box-sizing: border-box;
-  font-family: "Nunito Sans", sans-serif;
 }
 
 ul {
   list-style-type: none;
   padding: 0% !important;
+}
+
+a {
+  text-decoration: none !important;
 }

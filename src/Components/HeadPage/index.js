@@ -1,14 +1,18 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom/cjs/react-router-dom";
-
+import { NavLink, Link } from "react-router-dom/cjs/react-router-dom.min";
+import { useEffect } from "react";
 import "./index.css";
 
-const NavHeader = () => {
+const HeadPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <nav className="navbar navbar-expand-lg bg-light shadow-sm">
-      <div className="container">
+    <nav className="navbar navbar-expand-lg navbar-collapse bg-light shadow fixed-top">
+      <div className="container-fluid">
         <Link to="/">
-          <h1 className="navbar-brand custom-navbar-logo">Portfolio</h1>
+          <h1 className="navbar-brand custom-logo">Portfolio</h1>
         </Link>
         <button
           className="navbar-toggler shadow-none"
@@ -19,7 +23,7 @@ const NavHeader = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div
-          className="collapse navbar-collapse justify-content-end"
+          className="collapse navbar-collapse justify-content-lg-end"
           id="navbarSupportedContent"
         >
           <ul className="navbar-nav">
@@ -39,13 +43,13 @@ const NavHeader = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink exact to="/mini-projects" className="nav-link">
-                Mini-Projects
+              <NavLink exact to="/more-projects" className="nav-link">
+                More-Projects
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink exact to="/contact" className="nav-link">
-                Contact
+                Contact Us
               </NavLink>
             </li>
           </ul>
@@ -55,4 +59,4 @@ const NavHeader = () => {
   );
 };
 
-export default NavHeader;
+export default HeadPage;

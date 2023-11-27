@@ -1,8 +1,9 @@
 import React from "react";
-import NavHeader from "../NavHeader";
-import NavFooter from "../NavFooter";
+import HeadPage from "../HeadPage";
+import FooterPage from "../FooterPage";
 import { Chrono } from "react-chrono";
 import "./index.css";
+import { useEffect } from "react";
 
 const skillsList = [
   { id: 1, value: "HTML5 / CSS3" },
@@ -33,47 +34,54 @@ const EducationList = [
   },
 ];
 
-const About = () => {
+const AboutPage = () => {
+//   useEffect(() => {
+//     window.scrollTo(0, 0);
+//   }, []);
+
   const items = EducationList.map((each) => ({
-    cardTitle: <h5 className="ms-4">{each.course}</h5>,
-    cardSubtitle: <h5 className="ms-4">{each.university}</h5>,
-    cardDetailedText: <h6 className="ms-3">{each.graduated}</h6>,
+    cardTitle: <h4>{each.course}</h4>,
+    cardSubtitle: <h5>{each.university}</h5>,
+    cardDetailedText: <h6>{each.graduated}</h6>,
   }));
 
   return (
-    <div className="container custom-scroll-container">
+    <div className="container">
       <div className="row">
-        <NavHeader />
-        <div
-          data-aos="zoom-in-up"
-          className="d-flex flex-column bg-success-subtle p-3 rounded"
-        >
-          <div>
-            <h1 className="text-center border-bottom border-dark custom-about-page-titles">
+        <div className="about-container p-lg-5">
+          <HeadPage />
+          <div data-aos="zoom-out-down">
+            <h1 className="text-center about-title border-bottom border-dark">
               About Me
             </h1>
-            <p className="about-me p-2">
+            <p className="my-lg-5">
               Hi, I'm <b>Ravichandra Kadavakuti </b> , a dedicated React
               developer passionate about creating seamless and engaging web
               applications. I enjoy turning ideas into reality and crafting
               user-friendly interfaces.
             </p>
           </div>
-          <div className="my-5">
-            <h3 className="text-primary title">Skills</h3>
+          <div
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+            className="my-5"
+          >
+            <h1 className="sub-titles text-primary">Skills</h1>
             <ul className="d-flex flex-wrap">
               {skillsList.map((each) => (
                 <li
+                  data-aos="flip-down"
                   key={each.id}
-                  className="border border-dark rounded shadow col-10 col-sm-5 p-3 m-4 custom-skills-items"
+                  className="col-11 col-sm-5 col-lg-3 p-3 m-2 border border-dark rounded skill-item"
                 >
                   <h6>{each.value}</h6>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="my-5">
-            <h3 className="text-primary title">Education</h3>
+          <div data-aos="flip-up" className="my-5">
+            <h1 className="sub-titles text-primary">Education</h1>
             <Chrono
               mode="VERTICAL"
               items={items}
@@ -84,14 +92,23 @@ const About = () => {
               timelinePointDimension={0}
             >
               <div className="chrono-icons">
-                <i className="fa-solid fa-graduation-cap"></i>
-                <i className="fa-solid fa-graduation-cap"></i>
-                <i className="fa-solid fa-graduation-cap"></i>
+                <i
+                  data-aos="flip-down"
+                  className="fa-solid fa-graduation-cap"
+                ></i>
+                <i
+                  data-aos="flip-down"
+                  className="fa-solid fa-graduation-cap"
+                ></i>
+                <i
+                  data-aos="flip-down"
+                  className="fa-solid fa-graduation-cap"
+                ></i>
               </div>
             </Chrono>
           </div>
-          <div className="my-5">
-            <NavFooter />
+          <div data-aos="flip-up">
+            <FooterPage />
           </div>
         </div>
       </div>
@@ -99,4 +116,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutPage;

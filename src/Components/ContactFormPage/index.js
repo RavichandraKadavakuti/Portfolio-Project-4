@@ -1,9 +1,9 @@
 import React from "react";
-import "./index.css";
-import NavHeader from "../NavHeader";
-import NavFooter from "../NavFooter";
-import { useState, useEffect } from "react";
+import HeadPage from "../HeadPage";
+import FooterPage from "../FooterPage";
+import { useState } from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom";
+import "./index.css";
 
 const initialStates = {
   INITIAL: "Initia;",
@@ -12,7 +12,7 @@ const initialStates = {
   INPROGRESS: "Inprogress",
 };
 
-const ContactForm = () => {
+const ContactFormPage = () => {
   const [name, setName] = useState("");
   const [emailId, setEmailId] = useState("");
   const [phone, setPhone] = useState("");
@@ -28,8 +28,7 @@ const ContactForm = () => {
 
   const submitForm = async (event) => {
     event.preventDefault();
-    const regex =
-      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const regex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
     const testEmail = regex.test(emailId);
 
     if (name === "" || name.length < 3) {
@@ -112,12 +111,12 @@ const ContactForm = () => {
   return (
     <div className="container custom-scroll-container">
       <div className="row">
-        <NavHeader />
+        <HeadPage />
         <div
           data-aos="zoom-in-up"
           className="d-flex flex-column bg-success-subtle p-3 rounded"
         >
-          <div className="border border-dark rounded col-12 col-md-6 p-2 my-3 mx-auto ">
+          <div className="border border-dark rounded col-12 col-md-6 p-2 my-3 my-lg-5 mx-auto">
             {!successMessage && (
               <form onSubmit={submitForm} className="shadow-lg p-2 p-lg-5">
                 <h1 className="text-center mb-3 mb-lg-5">
@@ -211,8 +210,8 @@ const ContactForm = () => {
               </div>
             )}
           </div>
-          <div className="my-5">
-            <NavFooter />
+          <div data-aos="flip-up">
+            <FooterPage />
           </div>
         </div>
       </div>
@@ -220,4 +219,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default ContactFormPage;

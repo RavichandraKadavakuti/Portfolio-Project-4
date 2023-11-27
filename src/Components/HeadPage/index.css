@@ -1,0 +1,27 @@
+body {
+  padding-top: 75px;
+}
+
+.custom-logo {
+  font-family: "Lobster Two", sans-serif;
+  font-weight: bold;
+  color: orangered !important;
+}
+
+.nav-link {
+  font-weight: bold !important;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.active {
+  color: #0d6efd !important;
+}
+
+@media screen and (min-width: 992px) {
+  .custom-logo {
+    font-size: 28px !important;
+  }
+  .nav-link:hover {
+    border-bottom: 2px solid orangered;
+  }
+}

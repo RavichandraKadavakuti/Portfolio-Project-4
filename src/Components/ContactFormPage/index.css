@@ -1,0 +1,11 @@
+.fa-circle-check {
+  color: green;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 992px) {
+  .fa-circle-check {
+    font-size: 50px;
+  }
+}

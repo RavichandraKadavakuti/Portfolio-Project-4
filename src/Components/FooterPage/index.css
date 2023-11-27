@@ -1,0 +1,19 @@
+.contact-page-title {
+  font-family: "Lobster Two", sans-serif;
+}
+
+.contact-icons {
+  color: black !important;
+  font-size: 25px;
+}
+
+.contact-icons:hover {
+  border-bottom: 2px solid black;
+  color: orangered !important;
+}
+
+@media screen and (min-width: 992px) {
+  .contact-icons {
+    font-size: 36px;
+  }
+}

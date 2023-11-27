@@ -1,56 +1,30 @@
-.custom-name-highlight {
-  color: black;
+.custom-profile-bg {
+  background-image: linear-gradient(
+    to right,
+    #b8cbb8 0%,
+    #b8cbb8 0%,
+    #b465da 0%,
+    #cf6cc9 33%,
+    #ee609c 66%,
+    #ee609c 100%
+  );
+  font-family: "Nunito Sans", sans-serif;
   font-weight: bold;
-  font-size: 20px;
 }
 
-.profile {
+.profile-logo {
   width: 150px;
-  box-shadow: 0px 0px 15px 5px gray;
+  border-radius: 50%;
+  box-shadow: 0px 0px 40px 0px gray;
 }
 
-.profile:hover {
-  width: 160px;
-  box-shadow: 0px 0px 15px 0px orangered;
-}
-
-.custom-typing-container {
-  font-weight: bold;
-}
-
-.custom-job-role {
-  /* color: orangered; */
-  font-weight: bold;
-  margin: 0px 5px;
+.greeting-icon {
+  border-radius: 50%;
+  margin-left: 10px;
 }
 
 .custom-resume-btn:hover {
   background-color: black !important;
   color: white !important;
-  border: 1px solid white !important;
-}
-
-.greeting {
-  color: #0d6efd;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.greeting-icon {
-  border-radius: 50%;
-}
-
-.fa-circle-down {
-  font-size: 22px;
-}
-
-.btn:active {
-  background-color: #0d6efd !important;
-  border: none !important;
-}
-
-@media screen and (min-width: 992px) {
-  .custom-typing-container {
-    text-align: left;
-  }
+  border: transparent;
 }

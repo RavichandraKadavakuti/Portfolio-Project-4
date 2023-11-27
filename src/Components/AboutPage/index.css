@@ -1,0 +1,66 @@
+.about-container {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: bold;
+}
+
+.about-title {
+  font-family: "Lobster Two", sans-serif;
+}
+
+.sub-titles {
+  font-family: "Lobster Two", sans-serif;
+}
+
+.skill-item:hover {
+  background-color: orangered;
+  border: transparent !important;
+}
+
+.hIlYuq {
+  padding: 0% !important;
+}
+
+.kGjZyn {
+  margin-right: 20px !important;
+  color: black !important;
+}
+
+.bTBQuh {
+  left: 0px !important;
+}
+
+.jCGVMh {
+  min-height: 100px !important;
+  max-height: 150px !important;
+  padding-left: 15px !important;
+}
+
+.kGjZyn .active {
+  color: black !important;
+}
+
+.fa-graduation-cap {
+  font-size: 22px;
+}
+
+.fwujmm {
+  padding: 0px !important;
+}
+
+.hdOTXE {
+  margin: 0px !important;
+}
+
+.jlcKpA {
+  margin: 0px !important;
+}
+
+.ehwiVE {
+  margin: 0px !important;
+}
+
+@media screen and (min-width: 992px) {
+  .fa-graduation-cap {
+    font-size: 32px;
+  }
+}
