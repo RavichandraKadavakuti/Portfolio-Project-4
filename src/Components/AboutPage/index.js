@@ -35,23 +35,28 @@ const EducationList = [
 ];
 
 const AboutPage = () => {
-//   useEffect(() => {
-//     window.scrollTo(0, 0);
-//   }, []);
+  //   useEffect(() => {
+  //     window.scrollTo(0, 0);
+  //   }, []);
 
   const items = EducationList.map((each) => ({
     cardTitle: <h4>{each.course}</h4>,
-    cardSubtitle: <h5>{each.university}</h5>,
-    cardDetailedText: <h6>{each.graduated}</h6>,
+    cardSubtitle: (
+      <h5>
+        {each.university}
+        <br />
+        <h6>{each.graduated}</h6>
+      </h5>
+    ),
   }));
 
   return (
     <div className="container">
       <div className="row">
+        <HeadPage />
         <div className="about-container p-lg-5">
-          <HeadPage />
-          <div data-aos="zoom-out-down">
-            <h1 className="text-center about-title border-bottom border-dark">
+          <div data-aos="zoom-in-up">
+            <h1 className="text-center about-title border-bottom border-dark pb-3 pb-lg-5">
               About Me
             </h1>
             <p className="my-lg-5">
@@ -61,19 +66,14 @@ const AboutPage = () => {
               user-friendly interfaces.
             </p>
           </div>
-          <div
-            data-aos="fade-right"
-            data-aos-offset="300"
-            data-aos-easing="ease-in-sine"
-            className="my-5"
-          >
+          <div className="my-5">
             <h1 className="sub-titles text-primary">Skills</h1>
             <ul className="d-flex flex-wrap">
               {skillsList.map((each) => (
                 <li
                   data-aos="flip-down"
                   key={each.id}
-                  className="col-11 col-sm-5 col-lg-3 p-3 m-2 border border-dark rounded skill-item"
+                  className="col-12 col-sm-5 col-lg-3 p-3 m-1 border border-dark rounded skill-item"
                 >
                   <h6>{each.value}</h6>
                 </li>

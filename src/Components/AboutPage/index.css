@@ -1,6 +1,7 @@
 .about-container {
   font-family: "Nunito Sans", sans-serif;
   font-weight: bold;
+  width: 96% !important;
 }
 
 .about-title {
@@ -16,47 +17,34 @@
   border: transparent !important;
 }
 
-.hIlYuq {
-  padding: 0% !important;
-}
-
-.kGjZyn {
-  margin-right: 20px !important;
-  color: black !important;
-}
-
-.bTBQuh {
-  left: 0px !important;
-}
-
-.jCGVMh {
-  min-height: 100px !important;
-  max-height: 150px !important;
-  padding-left: 15px !important;
-}
-
-.kGjZyn .active {
-  color: black !important;
-}
-
 .fa-graduation-cap {
   font-size: 22px;
 }
 
+.jCGVMh {
+  background-color: transparent !important;
+  max-height: 150px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-left: 15px !important;
+}
+
+.bTBQuh {
+  background-color: transparent !important;
+}
+
+.gSDOzp.using-icon {
+  color: black !important;
+}
+
+.hIlYuq {
+  padding: 0rem !important;
+}
+
 .fwujmm {
-  padding: 0px !important;
-}
-
-.hdOTXE {
-  margin: 0px !important;
-}
-
-.jlcKpA {
-  margin: 0px !important;
-}
-
-.ehwiVE {
-  margin: 0px !important;
+  padding: 0rem !important;
 }
 
 @media screen and (min-width: 992px) {

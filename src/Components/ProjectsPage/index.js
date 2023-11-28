@@ -50,6 +50,9 @@ const ProjectsPage = () => {
       <div className="row">
         <HeadPage />
         <div className="p-lg-5">
+          <h1 className="text-center border-bottom border-dark pb-3 pb-lg-5 projects-title">
+            Projects
+          </h1>
           <ul
             data-aos="fade-up"
             data-aos-duration="1000"

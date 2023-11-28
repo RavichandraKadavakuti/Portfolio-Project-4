@@ -1,6 +1,5 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
-import { Document, Page } from "@react-pdf/renderer";
 import "./index.css";
 
 const HomePageContent = () => {
@@ -33,10 +32,10 @@ const HomePageContent = () => {
               <img
                 src="https://res.cloudinary.com/dnmaskg3n/image/upload/v1685355397/311431796_1181249342758752_3664529721297008871_n_xxa8d4.jpg"
                 alt="profile"
-                className="img-fluid profile-logo mb-3"
+                className="img-fluid profile-logo"
               />
             </div>
-            <div>
+            <div className="my-5">
               <TypeAnimation
                 sequence={[
                   `Hi ${greeting}`,
@@ -71,8 +70,6 @@ const HomePageContent = () => {
               onClick={onclickResume}
             >
               Resume
-              <Document file={Resume} />
-              <Page pageNumber={1} />
               <i className="fa-solid fa-circle-down ms-5"></i>
             </button>
           </div>

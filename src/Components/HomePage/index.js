@@ -9,8 +9,8 @@ const HomePage = () => {
   return (
     <div className="container">
       <div className="row">
+        <HeadPage />
         <div className="p-lg-5">
-          <HeadPage />
           <div
             data-aos="fade-right"
             data-aos-offset="300"
