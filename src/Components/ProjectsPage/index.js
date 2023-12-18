@@ -35,8 +35,9 @@ const porjectsLists = [
     projectImg:
       "https://res.cloudinary.com/dnmaskg3n/image/upload/v1685447386/Login_Empty_g2l9zg.png",
     projectName: "Tasty Kitchen",
-    projectLink: "#",
-    gitLink: "#",
+    projectLink: "https://tastykitchenkrc.netlify.app",
+    gitLink:
+      "https://github.com/RavichandraKadavakuti/Tasty-Kitchen-Project-5.git",
   },
 ];
 

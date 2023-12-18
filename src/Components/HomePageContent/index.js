@@ -17,7 +17,7 @@ const HomePageContent = () => {
     greetingIcon = "./icons8-night.gif";
   }
 
-  const Resume = `${process.env.PUBLIC_URL}/Resume/Ravichandra(IT) (1).pdf`;
+  const Resume = `${process.env.PUBLIC_URL}/Resume/Resume.pdf`;
 
   const onclickResume = () => {
     window.open(Resume, "_blank");
