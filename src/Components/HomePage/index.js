@@ -10,7 +10,7 @@ const HomePage = () => {
     <div className="container">
       <div className="row">
         <HeadPage />
-        <div className="p-lg-5">
+        <div className="d-flex flex-column justify-content-between home">
           <div
             data-aos="fade-right"
             data-aos-offset="300"

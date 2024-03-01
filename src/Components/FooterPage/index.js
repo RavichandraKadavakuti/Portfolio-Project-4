@@ -5,8 +5,8 @@ const FooterPage = () => {
   return (
     <div className="container">
       <div className="row">
-        <div className="d-flex flex-column align-items-center bg-light-subtle shadow rounded p-5 my-5">
-          <h1 className="contact-page-title">Contact Me</h1>
+        <div className="d-flex flex-column align-items-center  shadow-lg rounded my-5">
+          <h1 className="contact-page-title pt-3">Contact Me</h1>
           <ul className="d-flex justify-content-around col-12 col-sm-8 col-md-6 my-3 my-lg-5">
             <li>
               <a

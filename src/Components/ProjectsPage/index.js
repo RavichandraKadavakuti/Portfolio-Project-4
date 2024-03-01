@@ -95,6 +95,16 @@ const ProjectsPage = () => {
               </li>
             ))}
           </ul>
+          <div className="bg-warning rounded p-5 ">
+            <h6>
+              Note : <span>Given Below Are The Login credentials</span>
+            </h6>
+            <h6 className="d-inline">UserName : </h6>
+            <span>rahul</span>
+            <br/>
+            <h6 className="d-inline">Password : </h6>
+            <span>rahul@2021</span>
+          </div>
           <div data-aos="flip-up">
             <FooterPage />
           </div>
